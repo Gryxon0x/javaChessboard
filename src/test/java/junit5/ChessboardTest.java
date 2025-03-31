@@ -26,7 +26,7 @@ public class ChessboardTest {
         char[][] board = chessboard.getBoard();
         assertThat(chessboard.getBoard(), arrayWithSize(5));
         assertThat(chessboard.getBoard()[0].length, is (5));
-        assertThat(chessboard.getBoard()[0], everyItem(arrayContaining('□', '□', '□', '□', '□')));
+        assertThat(chessboard.getBoard()[0], equalTo(new char[]{'□', '□', '□', '□', '□'}));
     }
 
     @Test
