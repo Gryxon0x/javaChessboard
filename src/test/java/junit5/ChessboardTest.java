@@ -1,8 +1,6 @@
 package junit5;
 
-import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -23,7 +21,6 @@ public class ChessboardTest {
 
     @Test
     void shouldInitializeEmptyBoard() {
-        char[][] board = chessboard.getBoard();
         assertThat(chessboard.getBoard(), arrayWithSize(5));
         assertThat(chessboard.getBoard()[0].length, is (5));
         assertThat(chessboard.getBoard()[0], equalTo(new char[]{'□', '□', '□', '□', '□'}));
